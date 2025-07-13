@@ -1,0 +1,16 @@
+.userDetail {
+  max-width: 600px;
+  margin: 5rem auto;
+  padding: 1rem;
+  background: #e26a6a;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.userDetail h1 {
+  margin-bottom: 1rem;
+}
+
+.userDetail p {
+  margin-bottom: 0.5rem;
+}

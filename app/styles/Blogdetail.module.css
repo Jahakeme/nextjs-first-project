@@ -1,0 +1,16 @@
+.blogDetail {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #992222;
+}
+
+.blogDetail h1 {
+  margin-bottom: 1rem;
+}
+
+.blogDetail p {
+  line-height: 1.5;
+}

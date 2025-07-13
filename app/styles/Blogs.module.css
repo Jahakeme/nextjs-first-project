@@ -1,0 +1,23 @@
+.blogs {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.blogs ul {
+  list-style: none;
+  padding: 0;
+} 
+
+.blogs li {
+  margin-bottom: 1rem;
+} 
+
+.blogs a {
+  text-decoration: none;
+  color: #0070f3;
+} 
+
+.blogs a:hover {
+  text-decoration: underline;
+}

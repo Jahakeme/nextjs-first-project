@@ -1,0 +1,24 @@
+.users {
+  max-width: 50rem;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.users ul {
+  list-style: none;
+  padding: 0;
+}
+
+.users li {
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0;
+}
+
+.users li a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.users li a:hover {
+  text-decoration: underline;
+}
