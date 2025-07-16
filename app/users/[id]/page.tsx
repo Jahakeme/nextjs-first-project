@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
-import Navbar from '@/app/navbar/page';
 import styles from '@/app/styles/Userdetail.module.css';
 
 type User = {
@@ -34,7 +33,6 @@ export default function UserDetail() {
 
   return (
     <>
-      <Navbar />
       <div className={styles.userDetail}>
         {user ? (
           <>
