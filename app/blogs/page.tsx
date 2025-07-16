@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import styles from '../styles/Blogs.module.css';
-import Navbar from '../navbar/page';
 
 type Blog = {
   id: number;
@@ -21,7 +20,6 @@ export default function Blogs() {
 
   return (
     <>
-      <Navbar />
       <div className={styles.blogs}>
         <h1>All Blogs</h1>
         <ul>

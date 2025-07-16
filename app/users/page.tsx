@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import Navbar from '../navbar/page';
 import styles from '../styles/Users.module.css';
 
 type User = {
@@ -22,7 +21,6 @@ export default function Users() {
 
   return (
     <>
-      <Navbar />
       <div className={styles.users}>
         <h1>Users</h1>
         <ul>

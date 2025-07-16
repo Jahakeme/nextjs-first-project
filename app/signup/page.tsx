@@ -1,37 +1,17 @@
 'use client'
 
-// export default function Signup (){
-//     function register(formData: Iterable<readonly [PropertyKey, unknown]>){
-//         const data = Object.fromEntries(formData)
-//         console.log(data)    
-//     }
-
-//     return (
-//         <form action={register} className="signup">
-//             <label> Username  
-//                 <input type="input" placeholder="JohnDoe"/>
-//             </label>
-//             <label> Email  
-//                 <input type="input" placeholder="johndoe@gmail.com"/>
-//             </label>
-//             <label> Password  
-//                 <input type="password"/>
-//             </label>
-//             <label> Confirm Password  
-//                 <input type="password"/>
-//             </label>
-//             <button>
-//                 Submit
-//             </button>
-//         </form>
-//     )
-// }
 import { useState } from 'react';
 import styles from '@/app/styles/Signup.module.css';
-import Navbar from '../navbar/page'
+
+interface Form {
+  username: string,
+  email: string,
+  password: string,
+  confirmPassword: string
+}
 
 export default function SignUp () {
-  const [form, setForm] = useState({
+  const [form, setForm] = useState <Form>({
     username: '',
     email: '',
     password: '',
@@ -39,7 +19,8 @@ export default function SignUp () {
   });
 
   function handleChange (e: React.ChangeEvent<HTMLInputElement>) {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    const {name, value} = e.target
+    setForm({ ...form, [name]: value });
   };
 
   function handleSubmit (e: React.FormEvent) {
@@ -49,7 +30,6 @@ export default function SignUp () {
 
   return (
     <>
-      <Navbar />
       <form className={styles.form} onSubmit={handleSubmit}>
         <h2>Sign Up</h2>
         <input type="text" name="username" placeholder="Username" onChange={handleChange} required />
