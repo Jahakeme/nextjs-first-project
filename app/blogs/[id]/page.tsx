@@ -1,38 +1,11 @@
-'use client'
+import BlogDetail from '@/components/BlogDetail';
+import Navbar from '@/components/Navbar';
 
-import { useParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
-import styles from '@/app/styles/Blogdetail.module.css';
-import Navbar from '@/app/navbar/page';
-
-export default function BlogDetail() {
-  const params = useParams();
-  const id = params?.id;
-  const [blog, setBlog] = useState<{ title: string; body: string } | null>(null);
-
-  useEffect(() => {
-    if (id) {
-      fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
-        .then(res => res.json())
-        .then(data => setBlog(data));
-    }
-  }, [id]);
-
+export default function BlogDetailPage() {
   return (
     <>
       <Navbar />
-      <div className={styles.blogDetail}>
-        {blog ? (
-          <>
-            <h1>{blog.title}</h1>
-            <p>{blog.body}</p>
-            <Link href='/blogs'>Return to Blogs</Link>
-          </>
-        ) : (
-          <p>Loading...</p>
-        )}
-      </div>
+      <BlogDetail />
     </>
   );
 }
